@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 
+import SignInForm from './signinform';
+
 export default class SignIn extends Component {
+
+  onSubmit = (fields) => {
+    console.log(fields);
+  }
+
   render() {
     return (
       <div className='sign-in'>
-        <h1>Sign In</h1>
-        what the hell
-        why is this not showing up
+        <SignInForm className='sign-in__form' onSubmit={this.onSubmit} />
       </div>
     )
   }
