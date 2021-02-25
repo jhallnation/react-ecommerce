@@ -29,5 +29,11 @@
     font-size: 16px;
     color: #FFFFFF;
     outline: none;
+    cursor: pointer;
+  }
+
+  &__grey-button {
+    background-color: #999999;
+    width: 137px;
   }
 }

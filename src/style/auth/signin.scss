@@ -9,7 +9,7 @@
   &__form {
       display: grid;
       grid-template-rows: [email-s] 64px [email-e password-s] 64px [password-e] minmax(20px, 289px) [line-s] 2px [line-e login-s] 38px [login-e];
-      grid-template-columns: 1fr;
+      grid-template-columns: [back-s] 137px [back-e space-s] 40px [space-e login-s] 1fr [login-e] 1fr;
   }
 }
 
@@ -32,9 +32,14 @@
     border-top: 1px solid #ccc;
   }
 
+  &__back {
+    grid-row: buttons-s/buttons-e;
+    grid-column: back-s/back-e;
+  }
+
   &__login {
-    margin-top: 39px;
-    grid-row: login-s/login-e;
+    grid-row: buttons-s/buttons-e;
+    grid-column: login-s/login-e;
   }
   &__details {
     grid-row: 1/-1;

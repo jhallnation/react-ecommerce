@@ -13,7 +13,7 @@ class SignInForm extends Component {
     const links = [
       {
         _id: 0,
-        title: 'Not Registered? Create account',
+        title: 'Not Registered? Create Account',
         onClick: () => history.push('/signup')
       },
       {
@@ -47,8 +47,17 @@ class SignInForm extends Component {
         />
         <div className='sign-in-form__line'></div>
         <Field 
+          className='sign-up-form__back' 
+          onClick={() => history.goBack()}
+          type='submit'
+          name='back'
+          title='Back'
+          grey={true}
+          component={FormButton} 
+        />
+        <Field 
           className='sign-in-form__login' 
-          onClick={() => console.log('login submit')}
+          onClick={() => history.push('login submit')}
           type='submit'
           name='login'
           title='Login'

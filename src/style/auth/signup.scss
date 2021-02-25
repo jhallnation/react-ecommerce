@@ -1,4 +1,71 @@
 .sign-up {
   grid-row: content-s/content-e;
   grid-column: s/e;
+
+  &__page-title {
+
+  }
+
+  &__form {
+    display: grid;
+    grid-template-rows: [name-s] 64px [name-e email-s] 64px [email-e space-s] 35px [space-e password-s] 64px [password-e confirm-s] 64px [confirm-e] minmax(20px, 81px) [line-s] 26px [line-e buttons-s] 38px [buttons-e];
+    grid-template-columns: [back-s] 137px [back-e space-s] 40px [space-e register-s] 1fr [register-e] 1fr;
+    grid-row-gap: 15px;
+  }
+}
+
+.sign-up-form {
+  & > * {
+    grid-column: 1/-1;
+  }
+
+  &__name {
+    grid-row: name-s/name-e;
+  }
+
+  &__email {
+    grid-row: email-s/email-e;
+  }
+
+  &__password {
+    grid-row: password-s/password-e;
+  }
+
+  &__confirm {
+    grid-row: confirm-s/confirm-e;
+  }
+
+  &__line {
+    grid-row: line-s/line-e;
+    border-top: 1px solid #ccc;
+    margin-bottom: 24px;
+  }
+
+  &__register {
+    grid-row: buttons-s/buttons-e;
+    grid-column: register-s/register-e;
+  }
+
+  &__back {
+    grid-row: buttons-s/buttons-e;
+    grid-column: back-s/back-e;
+  }
+
+  &__details {
+    grid-row: 1/-1;
+    justify-self: end;
+    align-self: start;
+    display: grid;
+    grid-template-rows: [requirements-s] 64px [requirements-e space-s] 100px [space-e links-s] 64px [links-e];
+    grid-row-gap: 15px;
+
+    &__requirements {
+      grid-row: requirements-s/requirements-e;
+    }
+
+    &__links {
+      grid-row: links-s/links-e;
+    }
+  }
+
 }
